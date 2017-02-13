@@ -7,7 +7,7 @@
 		function __construct ($color){
 			$this->color=$color;
 
-			$this->show();
+			$this->show(); //llamamos a show de Quadre
 		}
 
 		function show(){

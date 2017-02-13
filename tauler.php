@@ -39,21 +39,23 @@ class Tauler
 	function dames($nRows=null, $nCols=null){
 		
 
-		for($i=0;$i<$nRows;$i++)
+
+		for($i=0;$i<$nRows;$i++) //for para recorrer las filas
 		{
-			for($x=0;$x<$nCols;$x++)
+			for($x=0;$x<$nCols;$x++) //for para recorrer las columnas
 			{
 
-				if($i%2==0)
+				if($i%2==0) //si la fila es par
 				{
-					if($x%2==0){
+					if($x%2==0){ //si la columna es par
 						$color="black";
 					}
 					else{
 						$color="white";
 					}
 
-					$this->peces[$i][$x] = $color;
+					$this->peces[$i][$x] = $color; 
+					//guardamos la variable $color en el array de piezas
 				}
 				else{
 					if($x%2==0){
@@ -78,7 +80,8 @@ class Tauler
 		{
 			for($x=0;$x<$nCols;$x++)
 			{
-				$row= rand(1, 2);
+				$row= rand(1, 2); 
+				//creamos un numero aleatorio distinto para columnas y filas
 				$col= rand(1, 2);
 
 				if($i%$row==0)
@@ -123,6 +126,7 @@ class Tauler
 
 			 $quadre = new Quadre($this->peces[$i][$x]);
 
+			 //creamos el objeto quadre para que nos cree el <td> "personalizado"
 
 			}
 
